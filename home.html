@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAISER JURISTICS</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="onkm1.css">
+    
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"  onmouseover="fun1()">OTAKU</a>
+
+        <nav class="navbar">
+            <a href="#" style="--i:1;" class="active">Home</a>
+            <a href="#" style="--i:2;" ondblclick="fun2()" >About</a>
+            <a href="home2.html" style="--i:3;" >Interests</a>
+            <a href="#" style="--i:4;">Portfolio</a>
+            <a href="index4.html" style="--i:5;" oncontextmenu="fun3()" id="curse">CurseForm</a>
+            <a href="form1.html" style="--i:6;">Register</a>
+
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Omerun Nesha Mallick</h1>
+            <h3>And I'm a <span class="multiple-text"></span>
+            </h3>
+           <p>
+            I looked at the ground and kept going to the top and Faced everything, like I'm so proud,
+            I always win. It's key that you got a strong will. The future's not going anywhere, not until I let go.
+
+           </p>
+          <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=100084908574424" style="--i:7;"><i class='bx bxl-facebook' onclick="fun()"></i></a>
+            <a href="https://instagram.com/juneikon46?igshid=ZDdkNTZiNTM=" style="--i:8;"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.linkedin.com/in/omerun-nesha-khatun-mallick-a84658230" style="--i:9;"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://github.com/new" style="--i:10;"><i class='bx bxl-github'></i></a>
+            <a href="https://mail.google.com/mail/u/0/#search/juneikon46@gmail.com" style="--i:11"><i class='bx bxs-envelope'></i></a>
+          </div>
+          <a href="rasengan.pdf" class="btn" >Download Resume</a>
+          </div>
+
+          <div class="home-img">
+            <img src="omen.jpg" width="350" onmouseout="fun4()">
+          </div>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>   
+     <script src="onkm2.js"></script>
+     <script type="text/javascript">
+
+        function fun(){
+            alert('Do follow me on Facebook');
+        }
+     
+        function fun1(){
+            alert('I share contents based on Anime which are my own sketches. Do follow me on my Instagram & Facebook. For more contents like this press the bell Icon & hit like. And get connected with me through linkedIn. ');
+        }
+      
+        function fun2(){
+            alert('Please go through my resume which may help you for your upcoming Placements.');
+        }
+     
+        function fun3(){
+            document.getElementById("curse").style.color="green";
+        }
+
+        function fun4(){
+            alert('Cool Pic Ryt!!');
+        }
+      </script>
+</body>
+</html>

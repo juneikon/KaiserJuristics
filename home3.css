@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Poppins:wght@300&family=Titillium+Web&display=swap');
+
+
+body{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background: #2b2a2a;
+}
+
+.a{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+ .main{
+    color: #0ef;
+    font-family: 'Poppins',sans-serif;
+ }
+
+ .main h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+ }
+
+ @keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.main h2{
+    max-width: 450px;
+    margin-right: -20px;
+    opacity: 0;
+    animation: zoomIn 2s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    border-radius: 30%;
+
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+ .logo video{
+    
+        display: inline-block;
+        margin: auto;
+        margin-left: 50vw;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 40%;
+        transform: translate(-50%);
+        box-shadow: 0 0 10px #0ef;
+        animation: slideTop 1s ease forwards;
+        animation-delay: 2s;
+      
+ }
+
+ @keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+ 
+
+
+
+ 
+

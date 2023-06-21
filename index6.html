@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="st.css">
+<script>
+    function validateForm(inputText) { 
+    var pw1 = document.getElementById("pswd1").value;  
+    var pw2 = document.getElementById("pswd2").value;  
+    var name1 = document.getElementById("fname").value; 
+    
+     if(name1 == "") {  
+        document.getElementById("blankMsg").innerHTML = "**Fill the first name";  
+        return false;  
+      }  
+
+      if(pw1 == "") {  
+        document.getElementById("message1").innerHTML = "**Fill the password please!";  
+        return false;  
+      } 
+
+      if(pw2 == "") {  
+        document.getElementById("message2").innerHTML = "**Enter the password please!";  
+        return false;  
+      } 
+
+      if(pw1.length < 8) {  
+        document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";  
+        return false;  
+      }  
+    
+      //maximum length of password validation  
+      if(pw1.length > 15) {  
+        document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
+        return false;  
+      }  
+      
+      if(pw1 != pw2) {  
+        document.getElementById("message2").innerHTML = "**Passwords are not same";  
+        return false;  
+      } else {  
+        alert ("Your password created successfully");  
+        document.write("JavaScript form has been submitted successfully");  
+      }  
+   } 
+   
+   
+</script>
+    
+</head>
+
+<body>
+  <div class="box">
+     <span class="borderLine"></span>
+            <form  id="form" onsubmit ="return validateForm()" action="action.php">
+                <h2>Register</h2>
+                <div class="inputBox">
+                     <input id="fname" name="name" type="text" value=""/>
+                     <span id = "blankMsg">Username</span>
+                     <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="email" name="email" type="email" required />
+                    <span>Email</span>
+                    <i></i>
+               </div>
+                <div class="inputBox">
+                     <input id = "pswd1" type="password" />
+                     <span id = "message1">Create Password</span>
+                     <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id = "pswd2" type="password" />
+                    <span id = "message2">Confirm Password</span>
+                    <i></i>
+               </div>
+                <br><br>
+               <button type = "submit">Signup</button>
+            </form>
+        </div>
+</body>
+</html>

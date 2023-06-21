@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Poppins:wght@300&family=Titillium+Web&display=swap');
+
+.a{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins',sans-serif;
+    color: aqua;
+   
+}
+
+.b th
+{
+  font-size: large;
+  font-weight: 500;
+  font-family: 'Poppins',sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: blueviolet;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+.omen h2{
+  animation: zoomIn 2s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 2s, 3s;
+}
+
+table, th, td{
+  border:1px solid black;
+  border-style: hidden;
+  border-radius: 6px 6px;
+}
+
+tr:nth-child(even){
+  background-color: rgb(37, 37, 37);
+  border-style: ridge;
+}
+ 
+tr:hover{
+  background-color: #fb046b;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.block{
+  position: relative;
+  margin: 10% auto 0;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(0deg, black, rgba(44,43,43));
+}
+
+.glow::before , .glow::after{
+  content: '';
+  position:  absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg , #e6fb04 , #ff6600 , #00ff66 , #00ffff , #ff00ff , #ff0099 , #6e0dd0 , #ff3300 , #099fff);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+   }
+   50%{
+    background-position: 400% 0;
+   }
+   100%{
+    background-position: 0 0;
+   }
+}
+
+@keyframes zoomIn{
+  0%{
+      transform: scale(0);
+      opacity: 0;
+  }
+
+  100%{
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes slideTop{
+  0%{
+      transform: translateY(100px);
+      opacity: 0;
+  }
+
+  100%{
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.glow::after{
+  filter:blur(50px);
+}

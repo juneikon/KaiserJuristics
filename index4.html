@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYFORM</title>
+    <link rel="stylesheet" href="style4.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Poppins:wght@300&family=Titillium+Web&display=swap');
+         body{
+            font-family: 'Poppins',sans-serif;
+         }
+    </style>
+
+<script >
+    function Functa() {
+    var p = document.getElementById("demo");
+    p.value = p.value.toUpperCase();
+    }
+
+    function focusevent()  
+    {  
+        document.getElementById("demo1").style.background=" aqua";  
+    } 
+    
+    function keydownevent()  
+    {  
+        document.getElementById("input1");  
+        alert("Pressed a key");  
+    }  
+
+    
+
+    function robo() {
+        var x = document.getElementById("myselect").value;
+        document.getElementById("m1").innerHTML = "you selected" + x;
+    }
+    
+    function myFunction() {
+  alert("The form was submitted");
+}
+
+function myFunc2() {
+  alert("You have selected some text!");
+}
+    function chitti() {
+        alert("Sayonara")
+    }
+
+    
+</script>
+    
+</head>
+<body onload="window.alert('Page successfully loaded');">
+
+    <div class="box">
+        <div class="borderLine">
+            <span class="b"></span>
+        <form id="forms" onsubmit="myFunction()" onreset="chitti()">
+           <div class="main"> <center> <h2>SORCERERS CURSED SPIRITS FORM</h2></center></div>
+            <div class="inputBox">
+                <span>First Name:</span>
+                <input type="text" name="myFN" id="demo" placeholder="Enter your first name" onblur="Functa()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Last Name:</span>
+                <input type="text" name="myLN"  id="demo1" placeholder="Enter your last name" onfocus="focusevent()">
+                
+            </div><br>
+            <div class="inputBox">
+                <span>Species:</span>
+                <br>
+                <div class="rem" >
+                    <label><input type="checkbox" name="mySp">Human</label><br>
+                    <label><input type="checkbox" name="mySp">Cursed Object </label>
+                </div>
+                </div><br>
+                <div class="inputBox">
+                    <span>Birthday:</span>
+                    <input type="date" name="myBD">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>Age:</span>
+                    <input type="number" name="abc" id="input1" onkeydown="keydownevent()">
+                </div><br>
+                <div class="inputBox">
+                    <span>Gender:</span><br>
+                    <input type="radio" name="myGen">
+                    <span>Male</span><br>
+                    <input type="radio" name="myGen">
+                    <span>Female</span><br>
+                    <input type="radio" name="myGen">
+                    <span>Transgender</span>
+                </div><br>
+                <div class="inputBox">
+                    <span>Height:</span>
+                    <input type="number" name="myHei" >
+                </div><br>
+                <div class="inputBox">
+                    <span>Hair Color:</span>
+                     <select name="choices" size="4"  onchange="liked&preferred()" id="subjects">
+                        <option value="1">Black</option>
+                        <option value="2">Brown</option>
+                        <option value="3">White</option>
+                        <option value="4">Brown Blonde Hair</option>
+                        <option value="5">Titian Hair</option>
+                        <option value="6">Red</option>
+                        <option value="7">Auburn Hair</option>
+                        <option value="8">Burgundy</option>
+                        <option value="9">Chestnut</option>
+                        <option value="10">Copper</option>
+                        <option value="11">Ombre</option>
+                        <option value="12">Pink</option>
+                        <option value="13">Plum</option>
+                        <option value="14">Platinum</option>
+                    </select>
+                </div><br>
+                <div class="inputBox">
+                    <span>Eye Color:</span>
+                             <select name="choices">
+                                <option value="1">Amber</option>
+                                <option value="2">Blue</option>
+                                <option value="3">Brown</option>
+                                <option value="4">Gray</option>
+                                <option value="5">Green</option>
+                                <option value="6">Hazel</option>
+                                <option value="7">Red</option>
+                              </select>
+                </div><br>
+                <div class="inputBox">
+                    <span>Contact:</span>
+                     <input type="number" name="myNum" placeholder="xxxxxx1234">
+                </div><br>
+                <div class="inputBox">
+                    <span>Email:</span>
+                    <input type="email" name="myEmail" required placeholder="Enter your valid email" oninvalid="alert('You must fill out the form!');" required>
+                </div><br>
+                <div class="inputBox">
+                    <span>Clan:</span><br>
+                    <input type="radio" name="myclan">
+                    <span>Gojou Clan</span> <br>
+                    <input type="radio" name="myclan">
+                    <span>Kamo Clan</span><br>
+                    <input type="radio" name="myclan">
+                    <span>Zenin Clan</span>
+                </div><br>
+                <div class="inputBox">
+                    <span>Grade:</span>
+                         <select  id="myselect" onchange="robo()">
+                            <option>Special Grade</option>
+                            <option>Special Grade 1</option>
+                            <option> Grade 1</option>
+                            <option>Semi-Grade 1</option>
+                            <option>Grade 2</option>
+                            <option>Semi-Grade 2</option>
+                            <option>Grade 3</option>
+                            <option>Grade 4</option>
+                         </select>
+                </div><br>
+                    <div class="rem">
+                        <span class="remi">Abilities:</span> <br>
+                              <label><input type="checkbox" name="myAb">Immense Strength</label>
+                              <br>
+                              <label><input type="checkbox" name="myAb">Infinity</label>
+                              <br>
+                              <label><input type="checkbox" name="myAb">Immensed Cursed Energy</label>
+                              <br>
+                              <label><input type="checkbox" name="myAb">High Skill</label>
+                              <br>
+                              <label><input type="checkbox" name="myAb">Tactical Intellect</label>
+                              <br>
+                              <label><input type="checkbox" name="myAb">Immense speed & reflexes</label>
+                              <br>
+                              <select name="XtraAb"  >
+                                  <optgroup label="Cursed Technique Lapse">
+                                        <option value="1">Blue</option>
+                                  </optgroup>
+                                  <optgroup label="Cursed Technique Reversal">
+                                        <option value="1">Red</option>
+                                        <option value="1">Hollow purple</option>
+                                        <option value="1">Six Eyes</option>
+                                        <option value="1">limitless</option>
+                                  </optgroup>
+                                  <optgroup label="Domain Expansion">
+                                        <option value="1">Unlimited Void</option>
+                                  </optgroup>
+                                </select>
+                            </div><br>
+                <div class="inputBox">
+                    <span id="demo3">Write about urself:</span>
+                                <textarea name="myText" id="m1" cols="30" rows="10" onselect="myFunc2()"></textarea  >
+                </div>
+                <script>
+                    function submit() {
+                      window.open("https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Fshots%2F16313052-GOJO-SATORU-SENSEI-JUJUTSU-KAISEN&psig=AOvVaw1tdtW0CEc1v93U0VtMsewa&ust=1683311775327000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMCU5IDP3f4CFQAAAAAdAAAAABAJ")
+                    }
+                </script>
+                <div class="myStyle">
+                    <input type="submit" value="Submit" >
+                   <input type="reset" value="Reset" >
+                </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
